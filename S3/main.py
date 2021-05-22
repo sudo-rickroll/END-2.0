@@ -15,8 +15,8 @@ def main(args, config):
     train_process = Process(int(config['Process']['epochs']), int(config['Process']['validate_per_epoch']), args.mode.lower(), model, device, config['Loss']['type'], train_loader, optimiser, test_loader, args.checkpoint_save)
     train_process.run()
     if 'train' in args.mode.lower():
-      plot([train_process.accs_total['train'], train_process.accs_total['test']], ['Training Set Accuracy', 'Testing Set Accuracy'], 'Epoch', 'Accuracy', 'Train and Test Accuracies')
-      plot([train_process.losses_total['train'], train_process.losses_total['test']], ['Training Set Loss', 'Testing Set Loss'], 'Epoch', 'Loss', 'Train and Test Losses')
+      plot([(range(1, int(config['Process']['epochs']) + 1), train_process.accs_total['train']), (range(1, int(config['Process']['epochs']) + 1), train_process.accs_total['test'])], ['Training Set Accuracy', 'Testing Set Accuracy'], 'Epoch', 'Accuracy', 'Train and Test Accuracies')
+      plot([(range(1, int(config['Process']['epochs']) + 1), train_process.losses_total['train']), (range(1, int(config['Process']['epochs']) + 1), train_process.losses_total['test'])], ['Training Set Loss', 'Testing Set Loss'], 'Epoch', 'Loss', 'Train and Test Losses')
 
 
 
