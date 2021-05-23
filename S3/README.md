@@ -18,4 +18,16 @@ This project contains the following folder and file components:
   <li><b>main.py</b> - The python file that contains the entry point to the entire pipeline.</li>
 </ul>
 
+## Using this repository
+
+### On local desktop machine
+
+Clone this entire subdirectory in the <b>END2</b> repository onto your local desktop using the following commands one by one (press enter key after each command) through git bash or terminal:</br>
+`git clone --depth 1 --filter=blob:none --sparse "https://github.com/sudo-rickroll/END2/"`</br>
+`cd "END2"`</br>
+`git sparse-checkout set S3`</br>
+
+
+
+
 
