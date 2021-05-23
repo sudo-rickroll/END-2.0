@@ -17,6 +17,7 @@ This project contains the following folder and file components:
   <li><b>main.ipynb</b> - The colab notebook file to run the entire process and displays log the outputs during the process. (<i>Note: In this notebook, the process is run considering that the repository is already cloned to google drive.</i>)</li>
   <li><b>main.py</b> - The python file that contains the entry point to the entire pipeline.</li>
 </ul>
+</br>
 
 ## Using this repository
 
@@ -53,6 +54,7 @@ For example,</br>
 `!python main.py --mode 'Train' --checkpoint_load './checkpoint/mnist_sum.pth' --checkpoint_save './checkpoint/mnist_sum.pth'` </br>
 
 All the commands here will be the same as mentioned in the previous section related to the local desktop machine process with the only change being the exclamation mark to be added ("!") at the start of every command. 
+</br>
 
 ## Model Breakdown and Process Statistics
 
@@ -61,6 +63,7 @@ The model/architecture used for this prediction has the following structure:</br
 ![Model Flowchart](https://user-images.githubusercontent.com/65642947/119257657-de828c80-bbe3-11eb-901a-0e631e81cf71.png)
 
 This model was trained for 25 epochs (specified in the configuration file) in the Train mode. The highest sum prediction accuracy of 74.57 % was obtained on the validation set in the 25th epoch, wherein the MNIST Digit prediction accuracy was at 99.11 %.
+</br>
 
 ## Output Evaluation Images
 
