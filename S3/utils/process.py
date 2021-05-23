@@ -72,7 +72,9 @@ class Process:
           plt.text(0.5, 0.5, pred_sum_value, fontsize=21)
           plt.axis('off')
           plt.text(-0.2, 0.7, f'Actual Total : {total}\nPredicted Total : {pred_sum_value}', fontsize=13)
+          plt.savefig(f'./images/Sample Validation.jpg', bbox_inches='tight')
           plt.show()
+          print("Image stored in the 'images' folder")
       return (accuracy_value_mnist/(len(self.test_loader) * self.test_loader.batch_size)) * 100, (accuracy_value_total/(len(self.test_loader) * self.test_loader.batch_size)) * 100, loss_value_mnist, loss_value_total
 
     def run(self): 
