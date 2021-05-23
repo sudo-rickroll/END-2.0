@@ -41,7 +41,11 @@ class MNIST_Sum_Model(nn.Module):
     if checkpoint_path:
         print(f"Loading model checkpoint from '{checkpoint_path}'")
         try:
-          self.load_state_dict(torch.load(checkpoint_path)['model'])
+          parameters = torch.load(checkpoint_path)['model']    
+          model_dict = self.state_dict()
+          load_dict = {key: item for key, item in parameters.items() if key in model_dict}
+          model_dict.update(load_dict)
+          self.load_state_dict(model_dict)
           print("Model loaded successfully")
         except:
           print('Could not load model')
