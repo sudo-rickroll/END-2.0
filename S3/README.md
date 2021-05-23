@@ -75,12 +75,12 @@ This model was trained for 25 epochs (specified in the configuration file) in th
 ![Sample Validation](https://user-images.githubusercontent.com/65642947/119257855-d24aff00-bbe4-11eb-9a06-5cc662ecf3dc.jpg)
   
 
-<b>Graph for training mode accuracies on the Training Set vs Validation set : </b>
+<b>Graph for training mode accuracies on the Training Set vs Validation Set : </b>
 
 ![Train and Test Accuracies Graph](https://user-images.githubusercontent.com/65642947/119257913-10e0b980-bbe5-11eb-84ac-82f2f905d9ac.jpg)
   
 
-<b>Graph for training mode losses on the Training Set vs Validation set : </b>
+<b>Graph for training mode losses on the Training Set vs Validation Set : </b>
 
 ![Train and Test Losses Graph](https://user-images.githubusercontent.com/65642947/119257925-21912f80-bbe5-11eb-8721-b3872469be02.jpg)
 
