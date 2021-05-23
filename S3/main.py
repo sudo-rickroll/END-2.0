@@ -17,10 +17,11 @@ def main(args, config):
     if 'train' in args.mode.lower():
       plot([(range(1, int(config['Process']['epochs']) + 1), train_process.accs_total['train']), (range(1, int(config['Process']['epochs']) + 1), train_process.accs_total['test'])], ['Training Set Accuracy', 'Testing Set Accuracy'], 'Epoch', 'Accuracy', 'Train and Test Accuracies')
       plot([(range(1, int(config['Process']['epochs']) + 1), train_process.losses_total['train']), (range(1, int(config['Process']['epochs']) + 1), train_process.losses_total['test'])], ['Training Set Loss', 'Testing Set Loss'], 'Epoch', 'Loss', 'Train and Test Losses')
-
+      print("Images of the graphs stored in the 'images' folder")
 
 
 if __name__ == '__main__':
    args = parse_args()
    config = parse_config(args.config_path) 
-   main(args, config)
+   #main(args, config)
+   print(args)
