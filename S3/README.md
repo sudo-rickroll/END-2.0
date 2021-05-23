@@ -63,7 +63,7 @@ The model/architecture used for this prediction has the following structure:</br
 
 ![Model Flowchart](https://user-images.githubusercontent.com/65642947/119257657-de828c80-bbe3-11eb-901a-0e631e81cf71.png)
 
-This model was trained for 25 epochs (specified in the configuration file) in the Train mode. The highest sum prediction accuracy of 74.57 % was obtained on the validation set in the 25th epoch, wherein the MNIST Digit prediction accuracy was at 99.11 %.
+This model was trained for 25 epochs, using a batch size of 100 in the dataloaders, SGD as Optimiser and NLL Loss function (all of them specified in the configuration file) in the Train mode. The highest sum prediction accuracy of 74.57 % was obtained on the validation set in the 25th epoch, wherein the MNIST Digit prediction accuracy was at 99.11 %.
 
 </br>
 
