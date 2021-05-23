@@ -54,11 +54,32 @@ For example,</br>
 
 All the commands here will be the same as mentioned in the previous section related to the local desktop machine process with the only change being the exclamation mark to be added ("!") at the start of every command. 
 
-## Model Breakdown
+## Model Breakdown and Process Statistics
 
 The model/architecture used for this prediction has the following structure:</br>
 
 ![Model Flowchart](https://user-images.githubusercontent.com/65642947/119257657-de828c80-bbe3-11eb-901a-0e631e81cf71.png)
+
+This model was trained for 25 epochs (specified in the configuration file)in the Train mode. the highest sum prediction accuracy of 74.57 % was obtained on the validation set in the 25th epoch, wherein the MNIST Digit prediction accuracy was at 99.11 %.
+
+## Output Evaluation Graphs
+
+</br>
+<b>Validation result obtained on a random sample from the validation set : </b>
+
+![Sample Validation](https://user-images.githubusercontent.com/65642947/119257855-d24aff00-bbe4-11eb-9a06-5cc662ecf3dc.jpg)
+  
+
+<b>Graph for training mode accuracies on the Training Set vs Validation set : </b>
+
+![Train and Test Accuracies Graph](https://user-images.githubusercontent.com/65642947/119257913-10e0b980-bbe5-11eb-84ac-82f2f905d9ac.jpg)
+  
+
+<b>Graph for training mode losses on the Training Set vs Validation set : </b>
+
+![Train and Test Losses Graph](https://user-images.githubusercontent.com/65642947/119257925-21912f80-bbe5-11eb-8721-b3872469be02.jpg)
+
+
 
 
 
