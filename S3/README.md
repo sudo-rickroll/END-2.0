@@ -23,7 +23,7 @@ This project contains the following folder and file components:
 
 ### On local desktop machine
 
-Clone this entire subdirectory in the <b>END2</b> repository onto your local desktop using the following commands one by one (press enter key after each command) through git bash or terminal:</br>
+Clone this entire subdirectory in the <b>END2</b> repository onto your local desktop using the following commands one by one (press enter key after each command) through git bash or terminal :</br>
 `git clone --depth 1 --filter=blob:none --sparse "https://github.com/sudo-rickroll/END2/"`</br>
 `cd "END2"`</br>
 `git sparse-checkout set S3`</br>
@@ -43,7 +43,7 @@ For example, the following command will load the checkpoint file named 'mnist_su
 
 ### On Google Colaboratory
 
-Upload this entire subdirectory to your Google Drive manually or clone this entire subdirectory in the <b>END2</b> repository onto your Google Drive through a google colab file by first mounting your google drive and changing the directory to the one where you need this subdirectory to be cloned. Then, type the following commands one by one (press enter key after each command)</br>
+Upload this entire subdirectory to your Google Drive manually or clone this entire subdirectory in the <b>END2</b> repository onto your Google Drive through a google colab file by first mounting your google drive and changing the directory to the one where you need this subdirectory to be cloned. Then, type the following commands one by one (press enter key after each command) :</br>
 `!git clone --depth 1 --filter=blob:none --sparse "https://github.com/sudo-rickroll/END2/"`</br>
 `!cd "END2"`</br>
 `!git sparse-checkout set S3`</br>
@@ -59,7 +59,7 @@ All the commands here will be the same as mentioned in the previous section rela
 
 ## Model Breakdown and Process Statistics
 
-The model/architecture used for this prediction has the following structure:</br>
+The model/architecture used for this prediction has the following structure :</br>
 
 ![Model Flowchart](https://user-images.githubusercontent.com/65642947/119257657-de828c80-bbe3-11eb-901a-0e631e81cf71.png)
 
