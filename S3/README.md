@@ -65,7 +65,7 @@ This model was trained for 25 epochs (specified in the configuration file)in the
 ## Output Evaluation Images
 
 </br>
-<b>Validation result obtained on a random sample from the validation set : </b>
+<b>Validation on a random sample obtained from the validation set : </b>
 
 ![Sample Validation](https://user-images.githubusercontent.com/65642947/119257855-d24aff00-bbe4-11eb-9a06-5cc662ecf3dc.jpg)
   
