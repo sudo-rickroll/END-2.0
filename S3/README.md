@@ -27,6 +27,38 @@ Clone this entire subdirectory in the <b>END2</b> repository onto your local des
 `cd "END2"`</br>
 `git sparse-checkout set S3`</br>
 
+Once the subdirectory is downloaded, type `python main.py` in the terminal. This will train the model.
+
+Additionally, the `python main.py` will take four arguments - </br>
+<ul>
+  <li><i>--mode</i> -> Add <i>--mode 'Train'</i> to train the model or <i>--mode 'Validate'</i> to validate the model </li>
+  <li><i>--config_path</i> -> Add <i>--config_path '&lt;path to the configuration file&gt;'</i> to specify the path to the configuration file if it exists in a different folder. By default, the configuration file exists in the 'config' folder and this argument need not be provided if the same configuration file is used.</li>
+  <li><i>--checkpoint_save</i> -> Add <i>--checkpoint_save '&lt;path to save the checkpoint file&gt;'</i> to save the checkpoint of the model.</li>
+  <li><i>--checkpoint_load</i> ->  Add <i>--checkpoint_load '&lt;path to load the checkpoint file from&gt;'</i> to load a saved checkpoint to the model.</li>
+</ul>
+
+For example, the following command will load the checkpoint file named 'mnist_sum.pth' from the path '/END2/S3/checkpoint/' to the model, train the model for a certain number of epochs specified in the configuration file and will then save the resulting model in the path '/END2/S3/checkpoint/' with the file name 'mnist_sum.pth' by replacing the previously existing checkpoint file, as it is of the same name:</br>
+`python main.py --mode 'Train' --checkpoint_load './checkpoint/mnist_sum.pth' --checkpoint_save './checkpoint/mnist_sum.pth'`
+
+### On Google Colaboratory
+
+Upload this entire subdirectory to your Google Drive manually or clone this entire subdirectory in the <b>END2</b> repository onto your Google Drive through a google colab file by first mounting your google drive and changing the directory to the one where you need this subdirectory to be cloned. Then, type the following commands one by one (press enter key after each command)</br>
+`!git clone --depth 1 --filter=blob:none --sparse "https://github.com/sudo-rickroll/END2/"`</br>
+`!cd "END2"`</br>
+`!git sparse-checkout set S3`</br>
+
+Once cloned, open the <b>main.ipynb</b> file and run all the commands or create your own colab file and change the working directory to the <b>S3</b> subdirectory and type `!python main.py`. This will take 4 arguments too, as mentioned in the previous section related to the local desktop machine process.
+  
+For example,</br>
+`!python main.py --mode 'Train' --checkpoint_load './checkpoint/mnist_sum.pth' --checkpoint_save './checkpoint/mnist_sum.pth'` </br>
+
+All the commands here will be the same as mentioned in the previous section related to the local desktop machine process with the only change being the exclamation mark to be added ("!") at the start of every command. 
+
+## Model Breakdown
+
+The model/architecture used for this prediction has the following structure:</br>
+
+![Model Flowchart](https://user-images.githubusercontent.com/65642947/119257657-de828c80-bbe3-11eb-901a-0e631e81cf71.png)
 
 
 
