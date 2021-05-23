@@ -23,5 +23,5 @@ def main(args, config):
 if __name__ == '__main__':
    args = parse_args()
    config = parse_config(args.config_path) 
-   #main(args, config)
-   print(args)
+   main(args, config)
+   
