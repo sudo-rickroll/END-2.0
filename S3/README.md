@@ -44,9 +44,9 @@ For example, the following command will load the checkpoint file named 'mnist_su
 ### On Google Colaboratory
 
 Upload this entire subdirectory to your Google Drive manually or clone this entire subdirectory in the <b>END2</b> repository onto your Google Drive through a google colab file by first mounting your google drive and changing the directory to the one where you need this subdirectory to be cloned. Then, type the following commands one by one (press enter key after each command) :</br>
-`!git clone --depth 1 --filter=blob:none --sparse "https://github.com/sudo-rickroll/END2/"`</br>
-`!cd "END2"`</br>
-`!git sparse-checkout set S3`</br>
+-> `!git clone --depth 1 --filter=blob:none --sparse "https://github.com/sudo-rickroll/END2/"`</br>
+-> `!cd "END2"`</br>
+-> `!git sparse-checkout set S3`</br>
 
 Once cloned, open the <b>main.ipynb</b> file and run all the commands or create your own colab file and change the working directory to the <b>S3</b> subdirectory and type `!python main.py`. This will take 4 arguments too, as mentioned in the previous section related to the local desktop machine process.
   
