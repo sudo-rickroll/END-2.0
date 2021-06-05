@@ -29,3 +29,25 @@ For the purpose of sentiment analysis as part of this directory, only the root s
 After the sentences are fetched from the root node of the trees from the pytreebank, they are read onto a dataframe using the `to_labeled_lines()` method of the pytreebank. This produces a dictionary with three keys, namely - `train`, `test` and `dev`. As the name suggests, `train` is the train set, `test` is the test set and `dev` is the validation set.
 
 The dataframe produces by these three dictionaries are then combined to obtain the complete dataset. This complete dataset is then again split to Train Dataset and Validation Dataset, with the desired proportion of data in each of them. Augmentations are done on the Train Dataset and later, with this augmented Train Set and the original (untouched) Validation Set are then used to build the Dataset objects from the <i>torchtext.legacy.data</i> module. 
+
+### Dataset Augmentation
+
+As mentioned in the <i>Dataset Preparation</i> section, augmentations are performed on the Train Dataset. Here, a certain portion of the Train Dataset is chosen and augmentations are performed on them and the resulting augmented sentences are added to the dataset (original sentences are not replaced by the augmented sentences) to provide invariance and to also add data to the dataset.
+
+For the analysis present in this directory, three types of augmentations are performed :
+<ol>
+  <li>Random Augmentations:</li>
+  <ul>
+    <li>Random Swap</li>
+    <li>Random Delete</li>
+  </ul>
+  <li>Back Translation</li>
+</ol>
+
+Random Augmentations [[1]](#1)
+
+> ## References
+  >><a id="1">[1]</a> 
+    Jason Wei and Kai Zou (2019). 
+    <a href="https://arxiv.org/abs/1901.11196v2">EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks. </a> 
+    arXiv:1901.11196v2 [cs.CL].
