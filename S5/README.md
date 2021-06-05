@@ -54,7 +54,7 @@ Random Swap and Random Delete have been performed using <i>nlpaug</i> (https://g
 ![image](https://user-images.githubusercontent.com/65642947/120890249-fc59e380-c61e-11eb-94d4-230f543e2d7a.png)
 
 
-For the remaining samples of that 5%, Back Translation was applied using <i>googletrans v3.1.0a0</i> (https://github.com/ssut/py-googletrans). 
+For the remaining samples of that 5% that was picked from the Train Set earlier, Back Translation was applied using <i>googletrans v3.1.0a0</i> (https://github.com/ssut/py-googletrans). 
 
 > ## References
   >><a id="1">[1]</a> 
