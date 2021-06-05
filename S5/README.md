@@ -49,7 +49,7 @@ For EDA [[1]](#1), 5% of the Train Dataset has been picked, based upon the follo
 ![image](https://user-images.githubusercontent.com/65642947/120890203-bbfa6580-c61e-11eb-8ca7-b537df93b68f.png)
 
 
-Random Swap and Random Delete have been performed using <i>nlpaug</i> (https://github.com/makcedward/nlpaug), each with a fraction of 1/3 samples from the 5% of the Train Dataset that was picked earlier, following the information from the EDA Research Paper[[1]](#1) (page 4):
+Random Swap and Random Delete have been performed using <i>nlpaug</i> (https://github.com/makcedward/nlpaug), each with a fraction of 1/3 samples from the 5% of the Train Dataset that was picked earlier. 1 augmented sentence was generated for every sentence and 1% of the words in each sentence were picked for augmentation, following the information from the EDA Research Paper[[1]](#1) (page 4):
 
 ![image](https://user-images.githubusercontent.com/65642947/120890249-fc59e380-c61e-11eb-94d4-230f543e2d7a.png)
 
