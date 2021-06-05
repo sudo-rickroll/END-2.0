@@ -36,7 +36,7 @@ As mentioned in the <i>Dataset Preparation</i> section, augmentations are perfor
 
 For the analysis present in this directory, three types of augmentations are performed :
 <ol>
-  <li>Random Augmentations:</li>
+  <li>Random Augmentations (EDA)</li>
   <ul>
     <li>Random Swap</li>
     <li>Random Delete</li>
@@ -44,10 +44,20 @@ For the analysis present in this directory, three types of augmentations are per
   <li>Back Translation</li>
 </ol>
 
-Random Augmentations [[1]](#1)
+For EDA [[1]](#1), 5% of the Train Dataset has been picked, based upon the following figure in the EDA Research Paper [[1]](#1) (page 3):
+
+![image](https://user-images.githubusercontent.com/65642947/120890203-bbfa6580-c61e-11eb-8ca7-b537df93b68f.png)
+
+
+Random Swap and Random Delete have been performed using <i>nlpaug</i> (https://github.com/makcedward/nlpaug), each with a fraction of 1/3 samples from the 5% of the Train Dataset that was picked earlier, following the information from the EDA Research Paper[[1]](#1) (page 4):
+
+![image](https://user-images.githubusercontent.com/65642947/120890249-fc59e380-c61e-11eb-94d4-230f543e2d7a.png)
+
+
+For the remaining samples of that 5%, Back Translation was applied using <i>googletrans v3.1.0a0</i> (https://github.com/ssut/py-googletrans). 
 
 > ## References
   >><a id="1">[1]</a> 
     Jason Wei and Kai Zou (2019). 
-    <a href="https://arxiv.org/abs/1901.11196v2">EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks. </a> 
+    <a href="https://arxiv.org/abs/1901.11196v2">EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks </a> (pp. 2 - 4).
     arXiv:1901.11196v2 [cs.CL].
