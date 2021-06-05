@@ -66,6 +66,7 @@ The model used here is based off of an RNN Network. It uses an Embedding Layer, 
     <img width="20%" src="https://user-images.githubusercontent.com/65642947/120892961-53b38000-c62e-11eb-8807-a8e4f60a9199.jpg"> 
 </p>
 
+</br>
 
 ## Parameters
 
@@ -92,8 +93,8 @@ The mentioned configuration yielded a maximum accuracy of 34.74% on the Validati
 
 Here are few of the observations and comments that were noted during and after this task.
 <ol>
-  <li>Running this model on the dataset with no augmentations yielded the best Validation Accuracy of 34.42% while the Train accuracy was at 72.77.</li>
-  <li>Running this model on the dataset with all the Random Augmentations (Random Insertion, Swap, Delete and Synonym Replacement) while producing 9 sentences per sentence in EDA and Back Translation augmentation on 500 Train Dataset samples yielded a maximum Validation Accuracy of 29% while the Train Accuracy was at 98%</li>
+  <li>Running this model with an LR of 0.0002 on the dataset with no augmentations yielded the best Validation Accuracy of 34.42% while the Train accuracy was at 72.77.</li>
+  <li>Running this model with an LR of 0.0002 on the dataset with all the Random Augmentations (Random Insertion, Swap, Delete and Synonym Replacement) while producing 9 sentences per sentence in EDA and Back Translation augmentation on 500 Train Dataset samples yielded a maximum Validation Accuracy of 29% while the Train Accuracy was at 98%</li>
 </ol>
 
 Despite the first case having a higher best validation set accuracy than the current implementaion, in both the cases above, it can be seen that there is a lot of overfitting. Implementation of augmentation did not yield a desired higher level of accuracy but combining it with finetuning of the learning rate slightly regularized the model, resulting in a drastic reduction of overfitting. 
