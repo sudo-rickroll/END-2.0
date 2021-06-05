@@ -76,7 +76,36 @@ Following are the parameter values used for this NLP Task:
   <li><b>Optimizer :</b> Adam </li>
   <li><b>Learning Rate :</b> 0.00001 </li>
   <li><b>Loss Function :</b> Cross Entropy Loss </li>
+  <li><b>Epochs :</b> 50 </li>
 </ul>
+
+## Evaluation Metrics
+
+The mentioned configuration yielded a maximum accuracy of 34.74% on the Validation Set in the 49th Epoch while the Train Set accuracy was at 47.99% for that epoch.
+
+## Epilogue
+
+Here are few of the observations and comments that were noted during and after this task.
+<ol>
+  <li>Running this model on the dataset with no augmentations yielded the best Validation Accuracy of 34.42% while the Train accuracy was at 72.77.</li>
+  <li>Running this model on the dataset with all the Random Augmentations (Random Insertion, Swap, Delete and Synonym Replacement) while producing 9 sentences per sentence in EDA and Back Translation augmentation on 500 Train Dataset samples yielded a maximum Validation Accuracy of 29% while the Train Accuracy was at 98%</li>
+</ol>
+
+Despite the first case having a higher best Validation Set accuracy than the current implementaion, in both the cases above, it can be seen that there is a lot of Overfitting. Implementation of augmentation did not yield a desired higher level of accuracy but combining it with finetuning of the Learning Rate slightly regularized the model, resulting in a drastic reduction of Overfitting. 
+
+Following are the further tweaks that can be performed on this implementation to test for any improvement in its performance:
+
+<ol>
+  <li>Increase the number of generated augmented sentences for every particular sentence, when performing EDA</li>
+  <li>Slightly increase the percentage of words augmented per sentence for EDA</li>
+  <li>Increase the number of samples augmented using Back Translation</li>
+  <li>Implement Biderectional LSTM</li>
+  <li>Implement LR Finder</li>
+</ol>
+
+The above steps may/may not result in increased performance, but these are the next steps that will be performed to evaluate this model.
+  
+  
 
 > ## References
   >><a id="1">[1]</a> 
