@@ -56,6 +56,13 @@ Random Swap and Random Delete have been performed using <i>nlpaug</i> (https://g
 
 For the remaining samples of that 5% that was picked from the Train Set earlier, Back Translation was applied using <i>googletrans v3.1.0a0</i> (https://github.com/ssut/py-googletrans). 
 
+## Model Preparation
+
+The model used here is based off of an RNN Network. It uses an Embedding Layer, a 2 Layer, Unidirectional LSTM Cell and a Fully Connected Layer. When the Input is passed onto the model, its Embeddings are produced and it is then packed to address the varying input text lengths. It is then passed onto the 2 Layer LSTM Cell. The final Hidden Layer Output is passed onto the Fully Connected Layer and this is the output from the model.
+
+![SST LSTM](https://user-images.githubusercontent.com/65642947/120892961-53b38000-c62e-11eb-8807-a8e4f60a9199.jpg)
+
+
 > ## References
   >><a id="1">[1]</a> 
     Jason Wei and Kai Zou (2019). 
