@@ -17,7 +17,7 @@ The Stanford Sentiment Bank contains 11855 sentences. Each sentence is assigned 
 
 These 11855 sentences are initially broken down to phrases and these phrases are mapped to IDs. These have labels attached to them, that determine their sentiment. These sentiment labels on individual phrases determine the final sentiment label of the sentence when all these phrases are combined to form sentences.
 
-The <b>pytreebank</b> library (https://pypi.org/project/pytreebank/) contains the sentences, phrases and their corresponding labels in a tree structure, with the sentence and its label present at the top of the tree.
+The <b>pytreebank</b> library (https://github.com/JonathanRaiman/pytreebank) contains the sentences, phrases and their corresponding labels in a tree structure, with the sentence and its label present at the top of the tree.
 
 For the purpose of sentiment analysis as part of this directory, only the root sentences have been used and the individual phrases making up the sentences have been discarded. Hence, only the root node from every tree of the pytreebank has been considered. 
 
@@ -28,7 +28,7 @@ For the purpose of sentiment analysis as part of this directory, only the root s
 
 After the sentences are fetched from the root node of the trees from the pytreebank, they are read onto a dataframe using the `to_labeled_lines()` method of the pytreebank. This produces a dictionary with three keys, namely - `train`, `test` and `dev`. As the name suggests, `train` is the train set, `test` is the test set and `dev` is the validation set.
 
-The dataframe produces by these three dictionaries are then combined to obtain the complete dataset. This complete dataset is then again split to Train Dataset and Validation Dataset, with the desired proportion of data in each of them. Augmentations are done on the Train Dataset and later, with this augmented Train Set and the original (untouched) Validation Set are then used to build the Dataset objects from the <i>torchtext.legacy.data</i> module. 
+The dataframe produces by these three dictionaries are then combined to obtain the complete dataset. This complete dataset is then again split to Train Dataset and Validation Dataset, with the desired proportion of data in each of them (70-30, in this case). Augmentations are done on the Train Dataset and later, with this augmented Train Set and the original (untouched) Validation Set are then used to build the Dataset objects from the <i>torchtext.legacy.data</i> module. 
 
 ### Dataset Augmentation
 
@@ -62,6 +62,21 @@ The model used here is based off of an RNN Network. It uses an Embedding Layer, 
 
 ![SST LSTM](https://user-images.githubusercontent.com/65642947/120892961-53b38000-c62e-11eb-8807-a8e4f60a9199.jpg)
 
+## Parameters
+
+Following are the parameter values used for this NLP Task:
+
+<ul>
+  <li><b>Dataset Split :</b> Train - 70, Val - 30 </li>
+  <li><b>Batch Size :</b> 16 </li>
+  <li><b>Embedding Size :</b> 300 </li>
+  <li><b>FC Layer Hidden Nodes :</b> 100 </li>
+  <li><b>Batch Size :</b> 16 </li>
+  <li><b>Dropout :</b> 0.2 </li>
+  <li><b>Optimizer :</b> Adam </li>
+  <li><b>Learning Rate :</b> 0.00001 </li>
+  <li><b>Loss Function :</b> Cross Entropy Loss </li>
+</ul>
 
 > ## References
   >><a id="1">[1]</a> 
