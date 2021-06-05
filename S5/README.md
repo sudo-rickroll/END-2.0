@@ -91,7 +91,7 @@ Here are few of the observations and comments that were noted during and after t
   <li>Running this model on the dataset with all the Random Augmentations (Random Insertion, Swap, Delete and Synonym Replacement) while producing 9 sentences per sentence in EDA and Back Translation augmentation on 500 Train Dataset samples yielded a maximum Validation Accuracy of 29% while the Train Accuracy was at 98%</li>
 </ol>
 
-Despite the first case having a higher best Validation Set accuracy than the current implementaion, in both the cases above, it can be seen that there is a lot of Overfitting. Implementation of augmentation did not yield a desired higher level of accuracy but combining it with finetuning of the Learning Rate slightly regularized the model, resulting in a drastic reduction of Overfitting. 
+Despite the first case having a higher best validation set accuracy than the current implementaion, in both the cases above, it can be seen that there is a lot of overfitting. Implementation of augmentation did not yield a desired higher level of accuracy but combining it with finetuning of the learning rate slightly regularized the model, resulting in a drastic reduction of overfitting. 
 
 Following are the further tweaks that can be performed on this implementation to test for any improvement in its performance:
 
