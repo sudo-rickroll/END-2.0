@@ -46,13 +46,15 @@ For the analysis present in this directory, three types of augmentations are per
 
 For EDA [[1]](#1), 5% of the Train Dataset has been picked, based upon the following figure in the EDA Research Paper [[1]](#1) (page 3):
 
-![image](https://user-images.githubusercontent.com/65642947/120890203-bbfa6580-c61e-11eb-8ca7-b537df93b68f.png)
-
+<p align="center" width="100%">
+    <img width="33%" src="https://user-images.githubusercontent.com/65642947/120890203-bbfa6580-c61e-11eb-8ca7-b537df93b68f.png"> 
+</p>
 
 Random Swap and Random Delete have been performed using <i>nlpaug</i> (https://github.com/makcedward/nlpaug), each with a fraction of 1/3 samples from the 5% of the Train Dataset that was picked earlier. 1 augmented sentence was generated for every sentence and 1% of the words in each sentence were picked for augmentation, following the information from the EDA Research Paper[[1]](#1) (page 4):
 
-![image](https://user-images.githubusercontent.com/65642947/120890249-fc59e380-c61e-11eb-94d4-230f543e2d7a.png)
-
+<p align="center" width="100%">
+    <img width="100%" src="https://user-images.githubusercontent.com/65642947/120890249-fc59e380-c61e-11eb-94d4-230f543e2d7a.png"> 
+</p>
 
 For the remaining samples of that 5% that was picked from the Train Set earlier, Back Translation was applied using <i>googletrans v3.1.0a0</i> (https://github.com/ssut/py-googletrans). 
 
@@ -60,7 +62,10 @@ For the remaining samples of that 5% that was picked from the Train Set earlier,
 
 The model used here is based off of an RNN Network. It uses an Embedding Layer, a 2 Layer, Unidirectional LSTM Cell and a Fully Connected Layer. When the Input is passed onto the model, its Embeddings are produced and it is then packed to address the varying input text lengths. It is then passed onto the 2 Layer LSTM Cell. The final Hidden Layer Output is passed onto the Fully Connected Layer and this is the output from the model.
 
-![SST LSTM](https://user-images.githubusercontent.com/65642947/120892961-53b38000-c62e-11eb-8807-a8e4f60a9199.jpg)
+<p align="center" width="100%">
+    <img width="20%" src="https://user-images.githubusercontent.com/65642947/120892961-53b38000-c62e-11eb-8807-a8e4f60a9199.jpg"> 
+</p>
+
 
 ## Parameters
 
