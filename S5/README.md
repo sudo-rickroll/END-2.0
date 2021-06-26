@@ -8,11 +8,11 @@ This directory contains the "main.ipynb" notebook prepared for training the Stan
 
 The Stanford Sentiment Bank contains 11855 sentences. Each sentence is assigned an ID and this ID is mapped to labels ranging from values 1-5, with the following sentiments:
 <ul>
-  <li> 0 <= Value < 0.2 -> Very Negative</li>
-  <li> 0.2 <= Value < 0.4 -> Negative</li>
-  <li> 0.4 <= Value < 0.6 -> Neutral</li>
-  <li> 0.6 <= Value < 0.8 -> Positive</li>
-  <li> 0.8 <= Value <= 1 -> Very Positive</li>
+  <li> 0 ≤ Value < 0.2 -> Very Negative</li>
+  <li> 0.2 ≤ Value < 0.4 -> Negative</li>
+  <li> 0.4 ≤ Value < 0.6 -> Neutral</li>
+  <li> 0.6 ≤ Value < 0.8 -> Positive</li>
+  <li> 0.8 ≤ Value ≤ 1 -> Very Positive</li>
 </ul>
 
 These 11855 sentences are initially broken down to phrases and these phrases are mapped to IDs. These have labels attached to them, that determine their sentiment. These sentiment labels on individual phrases determine the final sentiment label of the sentence when all these phrases are combined to form sentences.
