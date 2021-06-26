@@ -3,7 +3,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sudo-rickroll/END2/blob/main/S6/main.ipynb)
 
 
-This directory contains the code for Encoder-Decoder architecture and its in-depth output at every timestep.
+This directory contains the PyTorch code for Encoder-Decoder architecture and its in-depth output at every timestep.
 
 The model used here contains the following architecture
 
