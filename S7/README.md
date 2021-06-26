@@ -24,7 +24,15 @@ It contains 3 main text files:
 
 ### Dataset preparation
 
-For Dataset preparation, we first load all the sentences from <i>datasetSentences.txt</i> into a dataframe. Then, we get the id's of these sentences from <i>dictionary.txt</i>. If any sentence in <i>datasetSentences.txt</i> does not have an ID for it in the <i>dictionary.txt</i>, this item will be dropped.
+For Dataset preparation, we first load all the sentences from <i>datasetSentences.txt</i> into a dataframe. Then, we get the id's of these sentences from <i>dictionary.txt</i>. If any sentence in <i>datasetSentences.txt</i> does not have an ID for it in the <i>dictionary.txt</i>, this item will be dropped. The two columns will be named as "Sentences" and "Labels", in the dataframe.
+Then, using torchtext, we create Field for processing of "Sentences" and LabelField for processing of "Labels.
+Then, we create a dataset and we further split it into training and validation datasets.
+Using these datasets, we create a BucketIterator to so that batches can be prepared out of the dataset for loading into the model at a later stage during training.
+
+### Model
+
+The model consists of an embedding layer, followed by packing of this output sequence from embedding layer. Then, we feed it to a 2-layer, unidirectional LSTM.
+Then, the data is passed to a Fully Connected layer and for the output of it, a log softmax is applied. This will generate probabilistic outputs.
 
 ## Part B - Neural Machine Translation on "CMU Question-Answer" Dataset and "Quora Duplicate Question Pair" Dataset using LSTM Encoder-Decoder
 
