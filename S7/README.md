@@ -53,7 +53,7 @@ Using the torchtext legacy utilities, two "SRC" and "TRG" <i>Field</i> objects a
 
 This is an encoder-decoder architecture. We use a two-layered, unidirectional LSTM in both encoder and decoder, with a dropout of 0.5 in-between the layers. Encoder contains an embedding layer and LSTM layer. Decoder contains an LSTM layer and a Fully Connected layer. 
 
-We use PPL as a metric in place of accuracy to measure the performance of the model as it is a machine translation model. We do not use teacher forcing while evalating the test dataset.
+We use PPL as a metric in place of accuracy to measure the performance of the model as it is a translation and not a class-prediction model. We do not use teacher forcing while evalating the test dataset.
 
 ### Quora Question Duplication
 
