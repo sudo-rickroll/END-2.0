@@ -34,7 +34,7 @@ This directory contains the notebook to illustrate attention in NLP on Seq2Seq m
 ## Encoder
 
 The Encoder contains an Embedding Layer and an LSTM RNN. A zero valued tensor is created with dimensions of (sequence length, batch size, embedding dimensions) to store the encoder outputs at each timestep. The source language tensors are passed to the encoder, starting from the first word/token in the sentence, till the EOS token.
-</br>
+</br></br>
 
 ## Decoder
 
