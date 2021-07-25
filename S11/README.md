@@ -5,7 +5,7 @@ This directory contains the notebook to illustrate self attention in NLP on Seq2
 
 ## Parameter values
 
-<div>
+<div style="margin-left:auto;margin-right:auto">
   <table>
     <tr>
       <th>Parameter</th>
