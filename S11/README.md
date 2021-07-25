@@ -27,6 +27,14 @@ This directory contains the notebook to illustrate attention in NLP on Seq2Seq m
       <td>Output Dimension</td>
       <td>Number of tokens in the French Vocabulary</td>
     </tr>
+    <tr>
+      <td>LSTM Layers</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>LSTM Direction</td>
+      <td>1</td>
+    </tr>
   </table>
 </div>
 </br>
