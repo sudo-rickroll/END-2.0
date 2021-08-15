@@ -2,7 +2,7 @@
 
 BERT is a bidirectional transformer that is an encoder-only model. Since it is encoder-only kind of model, it fails to serve any utility in seq2seq architectures as the standalone model. But, it excels in utilities like predicting tokens/words that are masked in a sentence and predicting an answer to a question, given a passage, if the passage contains the answer. This is possible as the model gets to view the entire corpus of a datapoint in the dataset before making the prediction. Hence, it can derive the context and make accurate predictions from an already existing corpus of text in a datapoint. Hence the name "Bidirectional Transformer".
 
-In this directory, BERT has been used to generate answers to questions based on the provided paragraph. 
+In this directory, BERT from the huggingface library has been used to generate answers to questions based on the provided paragraph from SQuAD (Stanford Question Answering Dataset) v2. 
 
 Here are the sample predictions and the training logs:
 
