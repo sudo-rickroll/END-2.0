@@ -2,7 +2,7 @@
 
 BART is an encoder-decoder model that is a combination of BERT and GPT. BERT is used as the encoder and GPT is used as the decoder. Since BERT can build the context of the sentences with a naturally high degree of accuracy and GPT can help in using the context to predict/generate the next sequence of texts, this model can also be used in the seq2seq architectures.
 
-Here, we paraphrase sentences using the bart-base model on the Goggle data.
+Here, we paraphrase sentences using the bart-base model on the Google data using Facebook's bart-base model.
 
 Below are the sample predictions and training logs.
 
