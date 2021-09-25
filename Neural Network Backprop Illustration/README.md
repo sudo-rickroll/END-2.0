@@ -2,7 +2,7 @@
 
 This folder demonstrates the backpropagation technique in a Neural Network.
 
-The NN_Backprop.xlsx excel workbook in this folder has been created to give a detailed demonstration of Back Propagation in Neural Networks
+The main.xlsx excel workbook in this folder has been created to give a detailed demonstration of Back Propagation in Neural Networks
 
 Consider a simple 2 input, 2 output Neural Network with 1 hidden layer consisting of 2 neurons.
 
